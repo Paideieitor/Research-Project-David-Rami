@@ -1,0 +1,36 @@
+<!-- Config file for the game -->
+
+<config>
+  <app framerate_cap="60">
+    <title>Research Project David Rami - Assets ZIP Management with PhysFS</title>
+    <organization>CITM</organization>
+  </app>
+
+  <renderer>
+    <vsync value="true"/>
+  </renderer>
+
+  <window>
+    <resolution width="1280" height="720" scale="1"/>
+    <fullscreen value="false"/>
+    <borderless value="false"/>
+    <resizable value="false"/>
+    <fullscreen_window value="false"/>
+  </window>
+
+  <asset_manager>
+    <path>data.zip</path>
+  </asset_manager>
+
+  <map>
+    <folder>maps/</folder>
+    <maps>
+      <tutorial_map>Lobby.tmx</tutorial_map>
+    </maps>
+
+  </map>
+
+</config>
+
+<!-- Config file for the game -->
+
