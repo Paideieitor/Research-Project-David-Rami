@@ -52,10 +52,10 @@ The files are managed by a module called AssetManager, that contains the followi
 
 ## Handout
 ### TODO 1:
-At first the Handout will crash because we are creating a path without initializing PhysFS. To solve this use the functions PHISFS_init(nullptr) 
-and PHYSFS_deinit() in their corresponding places.
+At first the Handout will crash because we are creating a path without initializing PhysFS. To solve this use the functions ```PHISFS_init(nullptr) ```
+and ```PHYSFS_deinit()``` in their corresponding places
 ### TODO 2:
-Now we have to set the path from where to start searching all the other files in our case "Assets.zip". To solve this use the function PHYSFS_addToSearchPath("Assets.zip", 1).
+Now we have to set the path from where to start searching all the other files in our case "Assets.zip". To solve this use the function ```PHYSFS_addToSearchPath("Assets.zip", 1)```
 ### TODO 3: 
 We have to open the loaded file to be read and after checking that it has been correctly opened, we need to allocate a buffer as big as the file.
 ### TODO 4:
@@ -85,4 +85,5 @@ else
 ```
 ### TODO 5:
 Now that we can load files with PhysFS we have to use the SDL_RWops functions to load specific types of files in SDL to use them, in our case textures and sound effects.
-To solve this we go to Audio.cpp and in the LoadFx function substitute the function that loads a sound effect from the disk to Mix_Chunk* chunk = Mix_LoadWAV_RW(App->asset_manager->Load(path), 1), and in Textures.cpp in the Load function when loading a surface from the disk change the function to SDL_Surface* surface = IMG_Load_RW(App->asset_manager->Load(path), 1). 
+To solve this we go to Audio.cpp and in the LoadFx function substitute the function that loads a sound effect from the disk to ```Mix_Chunk* chunk = Mix_LoadWAV_RW(App->asset_manager->Load(path), 1)```
+ and in Textures.cpp in the Load function when loading a surface from the disk change the function to ```SDL_Surface* surface = IMG_Load_RW(App->asset_manager->Load(path), 1)``` 
