@@ -6,7 +6,7 @@ under supervision of lecturer [Ramon Santamaria](https://www.linkedin.com/in/ray
 
 This research project is about loading compressed assets in a ZIP file to a SDL program using the PhysFS library.
 
-All this information can be found in my website [here](https://google.com).
+All this information can be found in my website [here](https://paideieitor.github.io/Research-Project-David-Rami/).
 
 And [this](https://github.com/Paideieitor/Research-Project-David-Rami) is the link to the repository.
 
