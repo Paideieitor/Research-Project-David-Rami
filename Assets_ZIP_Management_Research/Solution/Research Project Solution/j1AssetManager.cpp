@@ -54,22 +54,22 @@ uint j1AssetManager::LoadData(const char* file, char** buffer) const
 {
 	uint ret = 0;
 
-	PHYSFS_file* data_file = PHYSFS_openRead(file);		//Open the file in the path to read
+	PHYSFS_file* data_file = PHYSFS_openRead(file);										//Open the file in the path to read
 
 	if (data_file != nullptr)
 	{
-		int file_lenght = PHYSFS_fileLength(data_file);							//Get the files size
-		*buffer = new char[(uint)file_lenght];									//Allocate a buffer of the files size
-		uint readed = PHYSFS_read(data_file, *buffer, 1, (uint)file_lenght);	//Read the data
-		if (readed != file_lenght)												//The bytes read should be the same as the file size
-		{
+		int file_lenght = PHYSFS_fileLength(data_file);									//Get the files size
+		*buffer = new char[(uint)file_lenght];											//Allocate a buffer of the files size
+		uint readed = PHYSFS_read(data_file, *buffer, 1, (uint)file_lenght);			//Read the data
+		if (readed != file_lenght)														//The bytes read should be the same as the file size
+		{	
 			LOG("Error while reading from file %s: %s\n", file, PHYSFS_getLastError());
-			RELEASE(buffer);													//Delete the buffer
+			RELEASE(buffer);															//Delete the buffer
 		}
 		else
-			ret = readed;														//Return the amout of bytes read
-
-		PHYSFS_close(data_file);												//Close the file handle
+			ret = readed;																//Return the amout of bytes read
+				
+		PHYSFS_close(data_file);														//Close the file handle
 	}
 	else
 		LOG("Error while opening file %s: %s\n", file, PHYSFS_getLastError());
